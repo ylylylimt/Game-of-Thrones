@@ -1,0 +1,336 @@
+/* Import Space Grotesk Font */
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;700&display=swap');
+
+body {
+    background: black;
+}
+
+.wrapper {
+    background: #f5f5ef;
+    width: 100%;
+    height: 100%;
+    max-height: 800px;
+    max-width: 1500px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: grid;
+    grid-template-columns: 0.5fr 0.6fr 2fr 1.3fr;
+    padding: 2rem;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+.wrapper > div {
+    display: flex;
+    flex-direction: column;
+    min-height: 0;
+}
+
+.article-header .bigTitle {
+    font-size: 7rem;
+    font-family: 'Space Grotesk', sans-serif;
+    font-weight: bold;
+}
+
+.article-content {
+    height: 100%;
+    padding: 1rem;
+}
+.article-content img {
+    width: 100%;
+    max-height: 200px;
+    filter: grayscale(1);
+}
+.page-no {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    font-size: 3rem;
+    border-right: 1px solid black;
+    text-align: center;
+}
+.article-header {
+    margin: 1rem;
+    padding: 1rem;
+    border-bottom: 1px solid black;
+    margin-top: 0;
+    scroll-snap-align: start;
+}
+.navigation {
+    border-right: 1px solid black;
+}
+.navigation ul {
+    list-style: none;
+    padding: 0;
+}
+.navigation ul li {
+    margin: 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    font-style: italic;
+}
+.article-content h3 {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 1.8rem;
+    padding: 0;
+    margin: 0;
+    font-weight: 400;
+}
+.article-content .row {
+    display: flex;
+    justify-content: space-between;
+    margin: 1rem 0;
+    font-size: 1.1rem;
+}
+.article-content .content {
+    font-size: 1.5rem;
+}
+.article-content .see-more {
+    border-top: 1px solid black;
+    display: flex;
+    justify-content: flex-end;
+    font-size: 1.5rem;
+}
+.suggested-articles {
+    overflow: auto;
+    scroll-snap-type: y mandatory;
+    padding-bottom: 2rem;
+}
+
+.featured {
+    border-left: 1px solid black;
+    max-height: inherit;
+    max-width: 500px;
+}
+.featured .smallTitle {
+    font-size: 2rem;
+    font-style: italic;
+}
+.featured .no {
+    font-size: 3rem;
+    font-style: normal;
+}
+.featured .row {
+    align-items: flex-end;
+}
+.featured-articles {
+    padding: 1rem;
+    overflow: auto;
+    height: 100%;
+}
+.feature {
+    height: auto;
+}
+.feature .title {
+    font-size: 1.7rem;
+    font-weight: 500;
+    padding-bottom: .5rem;
+}
+.date {
+    font-family: sans-serif;
+}
+.date-id {
+    margin-left: 90%;
+}
+
+/* Some responsiveness */
+@media screen and (max-width: 1375px) {
+    .article-header .bigTitle {
+        font-size: 5rem;
+    }
+}
+
+@media screen and (max-width: 1055px) {
+    .featured {
+        display: none !important;
+    }
+    .wrapper {
+        grid-template-columns: 1fr 1fr 2fr;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .wrapper {
+        grid-template-columns: 1fr 2fr;
+    }
+    .static {
+        display: none !important;
+    }
+}
+
+/* unvisited link */
+a:link {
+color: black;
+text-decoration: none;
+}
+
+/* visited link */
+a:visited {
+color: black;
+}
+
+/* mouse over link */
+a:hover {
+color: purple;
+}
+
+.collapsible {
+    width: 400px;
+    height: fit-content;
+    padding: 5px;
+    box-sizing: border-box;
+    font-weight: 400;
+  }
+  .head {
+    display: block;
+    width: 100%;
+    height: fit-content;
+    box-sizing: border-box;
+    padding: 10px;
+    border: 0.4mm solid black;
+    position: relative;
+    cursor: pointer;
+  }
+  .head::before {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translate(0, -50%);
+    font-size: 0.7rem;
+    content: "press";
+  }
+  .content-r {
+    width: 90%;
+    margin: auto;
+    border: 0.4mm solid black;
+    border-top: none;
+    overflow: hidden;
+    max-height: 200px;
+    transition: 0.35s ease-out;
+  }
+  .content-r span {
+    display: block;
+    padding: 15px;
+    text-align: justify;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 15px;
+    font-size: 1.07rem;
+  }
+  label {
+    text-transform: uppercase;
+  }
+  #toggle {
+    display: none;
+  }
+  #toggle1 {
+    display: none;
+  }
+  #toggle2 {
+    display: none;
+  }
+  #toggle3 {
+    display: none;
+  }
+  #toggle4 {
+    display: none;
+  }
+  #toggle5 {
+    display: none;
+  }
+  #toggle6 {
+    display: none;
+  }
+  #toggle7 {
+    display: none;
+  }
+  #toggle8 {
+    display: none;
+  }
+  #toggle9 {
+    display: none;
+  }
+  #toggle10 {
+    display: none;
+  }
+  #toggle11 {
+    display: none;
+  }
+  #toggle12 {
+    display: none;
+  }
+  #toggle13 {
+    display: none;
+  }
+  #toggle14 {
+    display: none;
+  }
+  #toggle15 {
+    display: none;
+  }
+  #toggle:not(:checked) ~ .content-r {
+    max-height: 0px;
+    visibility: hidden;
+  }
+  #toggle1:not(:checked) ~ .content-r {
+    max-height: 0px;
+    visibility: hidden;
+  }
+  #toggle2:not(:checked) ~ .content-r {
+    max-height: 0px;
+    visibility: hidden;
+  }
+  #toggle3:not(:checked) ~ .content-r {
+    max-height: 0px;
+    visibility: hidden;
+  }
+  #toggle4:not(:checked) ~ .content-r {
+    max-height: 0px;
+    visibility: hidden;
+  }
+  #toggle5:not(:checked) ~ .content-r {
+    max-height: 0px;
+    visibility: hidden;
+  }
+  #toggle6:not(:checked) ~ .content-r {
+    max-height: 0px;
+    visibility: hidden;
+  }
+  #toggle7:not(:checked) ~ .content-r {
+    max-height: 0px;
+    visibility: hidden;
+  }
+  #toggle8:not(:checked) ~ .content-r {
+    max-height: 0px;
+    visibility: hidden;
+  }
+  #toggle9:not(:checked) ~ .content-r {
+    max-height: 0px;
+    visibility: hidden;
+  }
+  #toggle10:not(:checked) ~ .content-r {
+    max-height: 0px;
+    visibility: hidden;
+  }
+  #toggle11:not(:checked) ~ .content-r {
+    max-height: 0px;
+    visibility: hidden;
+  }
+  #toggle12:not(:checked) ~ .content-r {
+    max-height: 0px;
+    visibility: hidden;
+  }
+  #toggle13:not(:checked) ~ .content-r {
+    max-height: 0px;
+    visibility: hidden;
+  }
+  #toggle14:not(:checked) ~ .content-r {
+    max-height: 0px;
+    visibility: hidden;
+  }
+  #toggle15:not(:checked) ~ .content-r {
+    max-height: 0px;
+    visibility: hidden;
+  }

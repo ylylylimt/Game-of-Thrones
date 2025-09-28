@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Game Of Thrones - Legacy</title>
+    <link rel="stylesheet" href="style.css" />
+    <!-- MENU https://dev.to/rajshreevats/create-landing-page-with-3-d-effect-4136 -->
+    <!-- TEXT REVEAL ANIMATION https://youtu.be/AMVqVIkOyu0?si=i3BwQHKfOxiqC3TD -->
+    <!-- FILTERABLE GALLERY https://www.bijanrai.com.np/2023/10/filterable-image-gallery.html -->
+    <!-- MODAL https://www.w3schools.com/howto/howto_css_modals.asp -->
+    <!-- FORM https://codepen.io/Mohuth/pen/QWgrPvp -->
+    <!-- CSS font 1 ("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap"); -->
+    <!-- CSS font 2 ("https://db.onlinewebfonts.com/c/97c4b25dc74e0ab045154e75a8fdd69d?family=Game+of+Thrones"); -->
+  </head>
+    
+  <body>
+    <!-- MENU https://dev.to/rajshreevats/create-landing-page-with-3-d-effect-4136 -->
+    <div class="container" id="home">
+      <div class="navbar">
+        <div class="menu">
+          <h3 class="logo">GOT<span>LEGACY</span></h3>
+          <div class="hamburger-menu" tabindex="1">
+            <div class="bar"></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="main-container">
+        <div class="main">
+          <header>
+            <!-- TEXT REVEAL ANIMATION https://youtu.be/AMVqVIkOyu0?si=i3BwQHKfOxiqC3TD -->
+            <div class="overlay">
+              <div class="inner">
+                <div class="title">
+                    <span>G</span> 
+                    <span>A</span>
+                    <span>M</span>
+                    <span>E</span>
+                    <span>' '</span>
+                    <span>O</span>
+                    <span>F</span>
+                    <span>' '</span>
+                    <span>T</span>
+                    <span>H</span>
+                    <span>R</span>
+                    <span>O</span>
+                    <span>N</span>
+                    <span>E</span>
+                    <span>S</span>
+                </div>
+                <nav>
+                  <a href="#gallery">
+                    <button class="button" tabindex="8">further</button>
+                  </a>
+                </nav>
+              </div>
+            </div>
+          </header>
+        </div>
+
+        <div class="shadow one"></div>
+        <div class="shadow two"></div>
+      </div>
+
+      <div class="links">
+        <ul>
+          <li>
+            <a href="#home" tabindex="2" style="--i: 0.05s;">Home</a>
+          </li>
+          <li>
+            <a href="#gallery" tabindex="3" style="--i: 0.1s;">Gallery</a>
+          </li>
+          <li>
+            <a href="#characters" tabindex="4" style="--i: 0.15s;">Characters</a>
+          </li>
+          <li>
+            <a href="#searchInput" tabindex="5" style="--i: 0.2s;">Search</a>
+          </li>
+          <li>
+            <a href="#myBtn" tabindex="6" style="--i: 0.25s;">Add New Item</a>
+          </li>
+          <li>
+            <a href="#resetBtn" tabindex="7" style="--i: 0.3s;">Reset</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <section class="gallery" id="gallery">
+        <div class="title2" tabindex="9">Gallery</div> 
+
+        <input type="text" id="searchInput" placeholder="Search by name or genre" title="Type to search">
+        
+        <!-- FILTERABLE GALLERY https://www.bijanrai.com.np/2023/10/filterable-image-gallery.html -->
+        <div class="container-gallery">
+            <div class="row-h">
+                <div class="gallery-filter">
+                    <span class="filter-item active" data-filter="all">all</span>
+                    <span class="filter-item" data-filter="1996">1996</span>
+                    <span class="filter-item" data-filter="1998">1998</span>
+                    <span class="filter-item" data-filter="2000">2000</span>
+                    <span class="filter-item" data-filter="2005">2005</span>
+                    <span class="filter-item" data-filter="2011">2011</span>
+                    <span class="filter-item" data-filter="2018">2018</span>
+                </div>
+            </div>
+            
+            <div class="row-got">
+                
+                <div class="gallery-item" id="1996">
+                    <div class="gallery-item-inner">
+                        <div class="search">
+                            <div>Game Of Thrones</div>
+                            <div>1996</div>
+                            <div>Action · Adventure · Fantasy</div>
+                        </div>
+                        <img src="https://filmschoolrejects.com/wp-content/uploads/2019/03/Game-of-Thrones-Winter-is-Coming.jpg" alt="A Game Of Thrones Book Cover">
+                        <p>Nine noble families wage war against each other in order to gain control over the mythical land of Westeros. Meanwhile, a force is rising after millenniums and threatens the existence of living men.</p>
+                    </div>
+                </div>
+                
+                <div class="gallery-item" id="1998">
+                    <div class="gallery-item-inner">
+                        <div class="search">
+                            <div>A Clash of Kings</div>
+                            <div>1998</div>
+                            <div>Action · Adventure · Fantasy</div>
+                        </div>    
+                        <img src="https://filmschoolrejects.com/wp-content/uploads/2019/03/Game-of-Thrones-Fire-and-Blood.jpg" alt="A Clash of Kings Book Cover">
+                        <p>The book tells the history of House Targaryen, the dynasty that ruled the Seven Kingdoms of Westeros in the backstory of his series A Song of Ice and Fire.</p>
+                    </div>
+                </div>
+                 
+                <div class="gallery-item" id="1998">
+                    <div class="gallery-item-inner">
+                        <div class="search">
+                            <div>A Knight of the Seven Kingdoms</div>
+                            <div>1998</div>
+                            <div>Action · Adventure · Fantasy</div>
+                        </div>
+                        <img src="https://filmschoolrejects.com/wp-content/uploads/2019/03/Game-of-Thrones-Lord-Snow.jpg" alt="A Knight of the Seven Kingdoms Book Cover">
+                        <p>A Knight of the Seven Kingdoms by George R. R. Martin, published in 2015, collects the first three prequel novellas to the popular A Song of Ice and Fire series.</p>
+                    </div>
+                </div>
+                
+                <div class="gallery-item" id="2000">
+                    <div class="gallery-item-inner">
+                        <div class="search">
+                            <div>Storm of Swords</div>
+                            <div>2000</div>
+                            <div>Action · Adventure · Fantasy</div>
+                        </div>
+                        <img src="https://filmschoolrejects.com/wp-content/uploads/2019/03/Game-of-Thrones-Cripples-Bastards-Broken-Things.jpg" alt="Storm of Swords Book Cover">
+                        <p>The novel describes the increasingly vicious War of Five Kings in Westeros, Daenerys's strengthening forces in the East, and the oncoming threat of the Others, a ghostly army that is nearly invincible.</p>
+                    </div>
+                </div>
+                
+                <div class="gallery-item" id="2005">
+                    <div class="gallery-item-inner">
+                        <div class="search">
+                            <div>A Feast For Crows</div>
+                            <div>2005</div>
+                            <div>Action · Adventure · Fantasy</div>
+                        </div>
+                        <img src="https://filmschoolrejects.com/wp-content/uploads/2019/03/Game-of-Thrones-The-Wolf-and-the-Lion.jpg" alt="A Feast For Crows Book Cover">
+                        <p>The book focuses on the Lannister family's continuing consolidation of power following victory in the King's Landing.</p>
+                    </div>
+                </div>
+    
+                <div class="gallery-item" id="2011">
+                    <div class="gallery-item-inner">
+                        <div class="search">
+                            <div>A Dance With Dragons</div>
+                            <div>2011</div>
+                            <div>Action · Adventure · Fantasy</div>
+                        </div>
+                        <img src="https://filmschoolrejects.com/wp-content/uploads/2019/03/Game-of-Thrones-A-Golden-Crown.jpg" alt="A Dance With Dragons Book Cover">
+                        <p>In the east, Daenerys Targaryen, the last scion of House Targaryen, rules with her three dragons as queen of a city built on dust and death.</p>
+                    </div>
+                </div>
+
+            </div>
+            <div class="row-default"></div>
+            <div class="row"></div>
+        </div>
+    </section>
+    
+    <!-- MODAL https://www.w3schools.com/howto/howto_css_modals.asp -->
+    <div id="myModal" class="modal">
+      <div class="modal-content">
+        <div class="modal-header">
+          <span class="close">&times;</span>
+        </div>
+        <div class="modal-body">
+            <!-- FORM https://codepen.io/Mohuth/pen/QWgrPvp -->
+           <div class="form-container">
+              <div class="screen">
+                <div class="screen__content">
+                  <form class="login" id="add-item-form" action="https://webtech.labs.vu.nl/api24/37d59641" method="post">
+                    <div class="login__field">
+                      <input type="text" class="login__input" id="name" name="name" placeholder="Book Name" required>
+                    </div>
+                    <div class="login__field">
+                      <input type="number" class="login__input" id="year" name="year" placeholder="Year" required>
+                    </div>
+                    <div class="login__field">
+                      <input type="url" class="login__input" id="poster" name="poster" placeholder="Book Cover" required>
+                    </div>
+                    <div class="login__field">
+                      <input type="text" class="login__input" id="genre" name="genre" placeholder="Genre" required>
+                    </div>
+                    <div class="login__field">
+                      <input type="text" class="login__input" id="description" name="description" placeholder="Description">
+                    </div>
+                    <button class="button login__submit">
+                      <span class="button__text">Add new item</span>
+                    </button>				
+                  </form>
+                  <br>
+                </div>
+              </div>
+            </div>
+        </div>
+      </div>
+    </div>
+    <div class ="gall-nav">
+      <div id="gall"></div>
+      <button id="myBtn" class="button">Add New Item</button>
+      <button id="resetBtn" class="button">Reset Database</button>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

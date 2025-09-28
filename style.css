@@ -1,0 +1,599 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap");
+@import url("https://db.onlinewebfonts.com/c/97c4b25dc74e0ab045154e75a8fdd69d?family=Game+of+Thrones");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  color: white;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: black;
+}
+
+.gall-nav {
+  display: grid;
+  grid-template-columns: auto 10% 10%;
+  padding: 1%;
+  margin-right: 10%;
+  margin-bottom: 2%;
+  grid-gap: 2%;
+  grid-template-areas: 
+     "gallery bt1 bt2"
+}
+
+#gall {
+  grid-area: gallery;
+}
+
+#resetBtn {
+  grid-area: bt2;
+}
+
+#myBtn {
+  grid-area: bt1;
+}
+
+#gallery {
+  font-family: sans-serif;
+}
+/* MENU https://dev.to/rajshreevats/create-landing-page-with-3-d-effect-4136 */
+.container {
+  min-height: 100vh;
+  width: 100%;
+  background-color: black;
+  background: url("https://www.iamag.co/wp-content/uploads/2016/02/got5.jpg") no-repeat top center / cover;
+  overflow-x: hidden;
+  transform-style: preserve-3d;
+}
+
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 10;
+  height: 3rem;
+}
+
+.menu {
+  max-width: 72rem;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #fff;
+}
+
+.logo {
+  font-size: 1.1rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  line-height: 4rem;
+}
+
+.logo span {
+  font-weight: 300;
+}
+
+.hamburger-menu {
+  height: 4rem;
+  width: 3rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.bar {
+  width: 1.9rem;
+  height: 1.5px;
+  border-radius: 2px;
+  background-color: #eee;
+  transition: 0.5s;
+  position: relative;
+}
+
+.bar:before,
+.bar:after {
+  content: "";
+  position: absolute;
+  width: inherit;
+  height: inherit;
+  background-color: #eee;
+  transition: 0.5s;
+}
+
+.bar:before {
+  transform: translateY(-9px);
+}
+
+.bar:after {
+  transform: translateY(9px);
+}
+
+.main {
+  position: relative;
+  width: 100%;
+  left: 0;
+  z-index: 5;
+  overflow: hidden;
+  transform-origin: left;
+  transform-style: preserve-3d;
+  transition: 0.5s;
+}
+
+header {
+  min-height: 100vh;
+  width: 100%;
+  background: url("https://wallpaperset.com/w/full/7/d/6/18291.jpg") no-repeat top center / cover;
+  position: relative;
+}
+
+.overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: rgba(24, 29, 34, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.inner {
+  max-width: 35rem;
+  text-align: center;
+  color: #fff;
+  padding: 0 2rem;
+}
+
+.title{
+    width: 80%;
+    position: fixed;
+    margin-top: 1rem;
+    padding: 0.6rem 1.8rem;
+    transform: translate(-50%, -50%);
+    display: flex;
+    font-family: "Game of Thrones";
+}
+  
+.title span{
+    text-align: center;
+    font-weight: 800;
+    font-size: 30px;
+    color:#777;
+    transition: 1s;
+    -webkit-transition: 1s;
+    -moz-transition: 1s;
+    animation: reveal 2.5s linear forwards;
+    opacity: 0;
+    filter: blur(13px);
+}
+  
+@keyframes reveal{
+    100% {
+        opacity: 1;
+        filter: blur(0);
+      }
+}
+  
+span:nth-child(1){
+    animation-delay: 0.7s;
+    -webkit-animation-delay: 0.7s;
+    -moz-animation-delay: 0.7s;
+}   
+
+.button {
+  margin-top: 1rem;
+  padding: 0.6rem 1.8rem;
+  background-color: transparent;
+  border: none;
+  border-radius: 25px;
+  color: white;
+  text-transform: uppercase;
+  cursor: pointer;
+  text-decoration: none;
+  transition-duration: 0.4s;
+  border: 2px solid white;
+}
+
+.button:hover {
+  background-color: white;
+  color: black;
+}
+
+.container.active .bar {
+  transform: rotate(360deg);
+  background-color: transparent;
+}
+
+.container.active .bar:before {
+  transform: translateY(0) rotate(45deg);
+}
+
+.container.active .bar:after {
+  transform: translateY(0) rotate(-45deg);
+}
+
+.container.active .main {
+  animation: main-animation 0.5s ease;
+  cursor: pointer;
+  transform: perspective(1300px) rotateY(20deg) translateZ(310px) scale(0.5);
+}
+
+@keyframes main-animation {
+  from {
+    transform: translate(0);
+  }
+
+  to {
+    transform: perspective(1300px) rotateY(20deg) translateZ(310px) scale(0.5);
+  }
+}
+
+.links {
+  position: absolute;
+  width: 30%;
+  right: 0;
+  top: 0;
+  height: 100vh;
+  z-index: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+ul {
+  list-style: none;
+}
+
+.links a {
+  text-decoration: none;
+  color: #eee;
+  padding: 0.7rem 0;
+  display: inline-block;
+  font-size: 1rem;
+  font-weight: 300;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: 0.3s;
+  opacity: 0;
+  transform: translateY(10px);
+  animation: hide 0.5s forwards ease;
+}
+
+.links a:hover {
+  color: #fff;
+}
+
+.container.active .links a {
+  animation: appear 0.5s forwards ease var(--i);
+}
+
+@keyframes appear {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+
+@keyframes hide {
+  from {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+  to {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+}
+
+.shadow {
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  transform-style: preserve-3d;
+  transform-origin: left;
+  transition: 0.5s;
+  background: url("https://wallpaperset.com/w/full/7/d/6/18291.jpg") no-repeat top center / cover;
+}
+
+.shadow.one {
+  z-index: -1;
+  opacity: 0.25;
+}
+
+.shadow.two {
+  z-index: -2;
+  opacity: 0.2;
+}
+
+.container.active .shadow.one {
+  animation: shadow-one 0.6s ease-out;
+  transform: perspective(1300px) rotateY(20deg) translateZ(215px) scale(0.5);
+}
+
+@keyframes shadow-one {
+  0% {
+    transform: translate(0);
+  }
+
+  5% {
+    transform: perspective(1300px) rotateY(20deg) translateZ(310px) scale(0.5);
+  }
+
+  100% {
+    transform: perspective(1300px) rotateY(20deg) translateZ(215px) scale(0.5);
+  }
+}
+
+.container.active .shadow.two {
+  animation: shadow-two 0.6s ease-out;
+  transform: perspective(1300px) rotateY(20deg) translateZ(120px) scale(0.5);
+}
+
+@keyframes shadow-two {
+  0% {
+    transform: translate(0);
+  }
+
+  20% {
+    transform: perspective(1300px) rotateY(20deg) translateZ(310px) scale(0.5);
+  }
+
+  100% {
+    transform: perspective(1300px) rotateY(20deg) translateZ(120px) scale(0.5);
+  }
+}
+
+.container.active .main:hover + .shadow.one {
+  transform: perspective(1300px) rotateY(20deg) translateZ(230px) scale(0.5);
+}
+
+.container.active .main:hover {
+  transform: perspective(1300px) rotateY(20deg) translateZ(340px) scale(0.5);
+}
+
+.title2{
+  font-size: 2rem;
+  font-weight: 700;
+  margin-left: 11%;
+  padding: 1rem 0.5rem;
+}
+p{
+  padding: 1rem 0.5rem;
+  font-weight: 400;
+}
+#searchInput {
+  width: 80%;
+  padding: 10px;
+  margin-bottom: 10px;
+  margin-left: 10%;
+  box-sizing: border-box;
+  color: black;
+}
+
+/* FILTERABLE GALLERY https://www.bijanrai.com.np/2023/10/filterable-image-gallery.html */
+.container-gallery{
+max-width: 1170px;
+margin:auto;
+}
+.row-h{
+display: flex;
+flex-wrap: wrap;
+}
+.row-got{
+  display: flex;
+  flex-wrap: wrap;
+  }
+.row-default{
+  display: flex;
+  flex-wrap: wrap;
+  }    
+.row{
+  display: flex;
+  flex-wrap: wrap;
+  }    
+
+img{
+vertical-align: middle;
+}
+.gallery{
+width: 100%;
+display: block;
+min-height: 100vh;
+background-color: black;
+padding: 100px 0;
+}
+.gallery .gallery-filter{
+padding: 0 15px;
+width: 100%;
+text-align: center;
+margin-bottom: 20px;
+}
+.gallery .gallery-filter .filter-item{
+color: #ffffff;
+font-size: 18px;
+text-transform: uppercase;
+display: inline-block;
+margin:0 10px;
+cursor: pointer;
+border-bottom: 2px solid transparent;
+line-height: 1.2;
+transition: all 0.3s ease;
+}
+.gallery .gallery-filter .filter-item.active{
+color: #5C5696;
+border-color : #5C5696;
+}
+.gallery .gallery-item{
+width: calc(100% / 3);
+padding: 15px;
+}
+.gallery .gallery-item-inner img{
+width: 100%;
+}
+.gallery .gallery-item.show{
+animation: fadeIn 0.5s ease;
+}
+.gallery .search{
+  padding: 5px;
+}
+@keyframes fadeIn{
+0%{
+opacity: 0;
+}
+100%{
+opacity: 1;
+}
+}
+.gallery .gallery-item.hide{
+display: none;
+}
+
+@media(max-width: 991px){
+.gallery .gallery-item{
+width: 50%;
+}
+}
+@media(max-width: 767px){
+  .gallery .gallery-item{
+width: 100%;
+}
+.gallery .gallery-filter .filter-item{
+margin-bottom: 10px;
+}
+}
+
+/* MODAL https://www.w3schools.com/howto/howto_css_modals.asp */
+.modal {
+  display: none; 
+  position: fixed; 
+  z-index: 1; 
+  padding-top: 100px; 
+  left: 0;
+  top: 0;
+  width: 100%; 
+  height: 100%; 
+  overflow: auto; 
+  background-color: rgb(0,0,0); 
+  background-color: rgba(0,0,0,0.4);
+}
+
+.modal-content {
+  position: absolute;
+  background-color: black;
+  margin-left: 35%;
+  padding: 0;
+  width: 30%;
+  box-shadow: 0px 0px 24px #5C5696;
+  -webkit-animation-name: animatetop;
+  -webkit-animation-duration: 0.4s;
+  animation-name: animatetop;
+  animation-duration: 0.4s
+}
+
+@-webkit-keyframes animatetop {
+  from {top:-300px; opacity:0} 
+  to {top:0; opacity:1}
+}
+
+@keyframes animatetop {
+  from {top:-300px; opacity:0}
+  to {top:0; opacity:1}
+}
+
+.close {
+  color: white;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #5C5696;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.modal-header {
+  padding: 2px 16px;
+  color: white;
+}
+
+/* FORM https://codepen.io/Mohuth/pen/QWgrPvp */
+.form-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.screen {		
+    background: black;		
+    position: relative;	
+    
+}
+
+.login {
+      width: 100%; 
+      height: 100%;
+}
+
+.login__field {
+    padding: 10px 0px;	
+    position: relative;	
+}
+
+.login__input {
+    border: none;
+    border-bottom: 2px solid #D1D1D4;
+    background: none;
+    padding: 10px;
+    padding-left: 24px;
+    font-weight: 700;
+    width: 75%;
+    transition: .2s;
+  color: white;
+}
+
+.login__input:active,
+.login__input:focus,
+.login__input:hover {
+    outline: none;
+    border-bottom-color: #6A679E;
+}
+
+.login__submit {
+    background: #fff;
+    font-size: 14px;
+    margin-top: 30px;
+    padding: 16px 20px;
+    border-radius: 26px;
+    border: 1px solid #D4D3E8;
+    text-transform: uppercase;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    width: 80%;
+    color: #4C489D;
+    cursor: pointer;
+    transition: .2s;
+}
+.button__text{
+  color: black;
+  font-weight: 250;
+}

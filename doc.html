@@ -1,0 +1,617 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="doc.css">
+    <!-- CODE SNIPPETS - https://www.freewebtoolkit.com/how-to-display-code-snippets-in-html-with-color -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.4.0/styles/atom-one-dark.min.css">
+    <!-- PAGE LAYOUT - https://github.com/webtutorialsw/newspaper/blob/main/style.css -->
+    <!-- COLLAPSIVE DIV - https://github.com/SnippetsDevelop/snippetsdevelop.github.io/blob/master/codes/collapsible-div-style.html -->
+    <title>API Documentation</title>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="navigation">
+            <ul>
+                <p><strong>Navigation:</strong></p>
+                <li><a href="#get1">Retrieve All Items</a></li>
+                <li><a href="#get2">Retrieve Item By ID</a></li>
+                <li><a href="#post">Create Item</a></li>
+                <li><a href="#put">Update Item By ID</a></li>
+                <li><a href="#delete">Delete Item By ID</a></li>
+                <li><a href="#get3">Reset Database</a></li>
+            </ul>
+        </div>
+        <div class="static">
+            <div class="article-header">
+                <div class="bigTitle">TO</div>
+                <div class="smallTitle">SCROLL</div>
+            </div>
+        </div>
+        <div class="suggested-articles">
+            <div class="article-header">
+                <div class="bigTitle" id="get1">RETRIEVE</div>
+                <div class="smallTitle">ALL ITEMS</div>
+            </div>
+            <div class="article-content">
+                <h3><strong>GET</strong> /items</h3>
+                <div class="row">
+                    <span>to retrieve the full data set from local database</span>
+                </div>
+                <p class="content">
+                    Content-Type: application/json: JSON data
+                    <div class="collapsible">
+                        <input type="checkbox" name="" id="toggle1" />
+                        <label for="toggle1" class="head"><a href="#get1-200">Response 200</a></label>
+                        <div class="content-r">
+                          <span>
+                            <h2>200 OK Success</h2>
+                            <p>It means that the server successfully returned as response all stored items.</p>
+                          </span>
+                        </div>
+                    </div>
+                    <div class="collapsible">
+                        <input type="checkbox" name="" id="toggle2" />
+                        <label for="toggle2" class="head"><a href="#get1-500">Response 500</a></label>
+                        <div class="content-r">
+                          <span>
+                            <h2>500 Internal Server Error</h2>
+                            <p>It means that the server encountered an unexpected condition that prevented it from fulfilling the request.</p>
+                          </span>
+                        </div>
+                    </div>
+                </p>
+                <div class="see-more"><a href="#1">
+                    > Go to 1 </a>
+                </div>
+            </div>
+            <div class="article-header">
+                <div class="bigTitle" id="get2">RETRIEVE</div>
+                <div class="smallTitle">BY ID</div>
+            </div>
+            <div class="article-content">
+                <h3><strong>GET</strong> /items/:id</h3>
+                <div class="row">
+                    <span>to retrieve the data of a specific item </span>
+                </div>
+                <p class="content">
+                    Content-Type: application/json: JSON data
+                    <div class="collapsible">
+                        <input type="checkbox" name="" id="toggle3" />
+                        <label for="toggle3" class="head"><a href="#get2-200">Response 200</a></label>
+                        <div class="content-r">
+                          <span>
+                            <h2>200 OK Success</h2>
+                            <p>It means that the server successfully returned as response item by ID.</p>
+                          </span>
+                        </div>
+                    </div>
+                    <div class="collapsible">
+                        <input type="checkbox" name="" id="toggle4" />
+                        <label for="toggle4" class="head"><a href="#get2-404">Response 404</a></label>
+                        <div class="content-r">
+                          <span>
+                            <h2>404 Not Found Error</h2>
+                            <p>It indicates that the user reached the domain they requested, but the URL path provided no information.</p>
+                          </span>
+                        </div>
+                    </div>
+                    <div class="collapsible">
+                        <input type="checkbox" name="" id="toggle5" />
+                        <label for="toggle5" class="head"><a href="#get2-500">Response 500</a></label>
+                        <div class="content-r">
+                          <span>
+                            <h2>500 Internal Server Error</h2>
+                            <p>It means that the server encountered an unexpected condition that prevented it from fulfilling the request.</p>
+                          </span>
+                        </div>
+                    </div>
+                </p>
+                <div class="see-more"><a href="#2">
+                    > Go to 2 </a>
+                </div>
+            </div>
+            <div class="article-header">
+                <div class="bigTitle" id="post">CREATE</div>
+                <div class="smallTitle">NEW ITEM</div>
+            </div>
+            <div class="article-content">
+                <h3><strong>POST</strong> /items</h3>
+                <div class="row">
+                    <span>to add new item to local database</span>
+                </div>
+                <p class="content">
+                    Content-Type: application/json: JSON data
+                    <div class="collapsible">
+                        <input type="checkbox" name="" id="toggle6" />
+                        <label for="toggle6" class="head"><a href="#post-201">Response 201</a></label>
+                        <div class="content-r">
+                          <span>
+                            <h2>201 Created</h2>
+                            <p>It means that the server successfully created an item.</p>
+                          </span>
+                        </div>
+                    </div>
+                    <div class="collapsible">
+                        <input type="checkbox" name="" id="toggle7" />
+                        <label for="toggle7" class="head"><a href="#post-500">Response 500</a></label>
+                        <div class="content-r">
+                          <span>
+                            <h2>500 Internal Server Error</h2>
+                            <p>It means that the server encountered an unexpected condition that prevented it from fulfilling the request.</p>
+                          </span>
+                        </div>
+                    </div>
+                </p>
+                <div class="see-more"><a href="#3">
+                    > Go to 3 </a>
+                </div>
+            </div>
+            <div class="article-header">
+                <div class="bigTitle" id="put">UPDATE</div>
+                <div class="smallTitle">BY ID</div>
+            </div>
+            <div class="article-content">
+                <h3><strong>PUT</strong> /items/:id</h3>
+                <div class="row">
+                    <span>to update an existing item by its id</span>
+                </div>
+                <p class="content">
+                    Content-Type: application/json: JSON data
+                    <div class="collapsible">
+                        <input type="checkbox" name="" id="toggle8" />
+                        <label for="toggle8" class="head"><a href="#put-204">Response 204</a></label>
+                        <div class="content-r">
+                          <span>
+                            <h2>204 No Content</h2>
+                            <p>It indicates that the server successfully updates item in local database.</p>
+                          </span>
+                        </div>
+                    </div>
+                    <div class="collapsible">
+                        <input type="checkbox" name="" id="toggle9" />
+                        <label for="toggle9" class="head"><a href="#put-404">Response 404</a></label>
+                        <div class="content-r">
+                            <span>
+                                <h2>404 Not Found Error</h2>
+                                <p>It indicates that the user reached the domain they requested, but the URL path provided no information.</p>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="collapsible">
+                        <input type="checkbox" name="" id="toggle10" />
+                        <label for="toggle10" class="head"><a href="#put-500">Response 500</a></label>
+                        <div class="content-r">
+                          <span>
+                            <h2>500 Internal Server Error</h2>
+                            <p>It means that the server encountered an unexpected condition that prevented it from fulfilling the request.</p>
+                          </span>
+                        </div>
+                    </div>
+                </p>
+                <div class="see-more"><a href="#4">
+                    > Go to 4 </a>
+                </div>
+            </div>
+            <div class="article-header">
+                <div class="bigTitle" id="delete">DELETE</div>
+                <div class="smallTitle">BY ID</div>
+            </div>
+            <div class="article-content">
+                <h3><strong>DELETE</strong> /items/:id</h3>
+                <div class="row">
+                    <span>to delete specific item by id in local database</span>
+                </div>
+                <p class="content">
+                    Content-Type: application/json: JSON data
+                    <div class="collapsible">
+                        <input type="checkbox" name="" id="toggle11" />
+                        <label for="toggle11" class="head"><a href="#delete-204">Response 204</a></label>
+                        <div class="content-r">
+                          <span>
+                            <h2>204 No Content</h2>
+                            <p>It means that the server successfully deleted item from database.</p>
+                          </span>
+                        </div>
+                    </div>
+                    <div class="collapsible">
+                        <input type="checkbox" name="" id="toggle12" />
+                        <label for="toggle12" class="head"><a href="#delete-404">Response 404</a></label>
+                        <div class="content-r">
+                            <span>
+                                <h2>404 Not Found Error</h2>
+                                <p>It indicates that the user reached the domain they requested, but the URL path provided no information.</p>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="collapsible">
+                        <input type="checkbox" name="" id="toggle13" />
+                        <label for="toggle13" class="head"><a href="#delete-500">Response 500</a></label>
+                        <div class="content-r">
+                          <span>
+                            <h2>500 Internal Server Error</h2>
+                            <p>It means that the server encountered an unexpected condition that prevented it from fulfilling the request.</p>
+                          </span>
+                        </div>
+                    </div>
+                </p>
+                <div class="see-more"><a href="#5">
+                    > Go to 5 </a>
+                </div>
+            </div>
+            <div class="article-header">
+                <div class="bigTitle" id="get3">RESET</div>
+                <div class="smallTitle">TO DEFAULT STATE</div>
+            </div>
+            <div class="article-content">
+                <h3><strong>GET</strong> /reset</h3>
+                <div class="row">
+                    <span>to reset local database to its default state, which contains 2 example default items</span>
+                </div>
+                <p class="content">
+                    Content-Type: application/json: JSON data
+                    <div class="collapsible">
+                        <input type="checkbox" name="" id="toggle14" />
+                        <label for="toggle14" class="head"><a href="#get3-201">Response 201</a></label>
+                        <div class="content-r">
+                          <span>
+                            <h2>201 Created Default Items</h2>
+                            <p>It means that the database has been reset to its default state, resulting in the creation of two default items.</p>
+                          </span>
+                        </div>
+                    </div>
+                    <div class="collapsible">
+                        <input type="checkbox" name="" id="toggle15" />
+                        <label for="toggle15" class="head"><a href="#get3-500">Response 500</a></label>
+                        <div class="content-r">
+                          <span>
+                            <h2>500 Internal Server Error</h2>
+                            <p>It means that the server encountered an unexpected condition that prevented it from fulfilling the request.</p>
+                          </span>
+                        </div>
+                    </div>
+                </p>
+                <div class="see-more"><a href="#6">
+                    > Go to 6 </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="featured">
+            <div class="article-header">
+                <div class="smallTitle">Examples</div>
+            </div>
+            <div class="featured-articles">
+                <div class="feature article-content">
+                    <div class="row">
+                        <div class="no" id="1">1</div>
+                        <div class="date"><strong><em>ENDPOINT: </em></strong>http://localhost:3000/items</div>
+                    </div>
+                    <div class="title" id="get1-200">200 OK Success</div>
+                    <div class="description">
+                        Request Body:
+<pre><code>
+This request does not have a body.    
+</code></pre>     
+                    </div>
+                    <div class="description">
+                        Response Body:
+<pre><code>
+[    
+{
+    &quot;id&quot;: 1,
+    &quot;name&quot;: &quot;Game Of Thrones&quot;,
+    &quot;year&quot;: &quot;1996&quot;,
+    &quot;genre&quot;: &quot;action, adventure, fantasy&quot;,
+    &quot;poster&quot;: &quot;https://filmschoolrejects.com/wp-content/uploads/2019/03/Game-of-Thrones-Winter-is-Coming.jpg&quot;,
+    &quot;description&quot;: &quot;Nine noble families wage war against each other in order to gain control over the mythical land of Westeros. Meanwhile, a force is rising after millenniums and threatens the existence of living men.&quot;
+},
+{
+    &quot;id&quot;: 2,
+    &quot;name&quot;: &quot;A Clash of Kings&quot;,
+    &quot;year&quot;: &quot;1998&quot;,
+    &quot;genre&quot;: &quot;drama, fiction, fantasy&quot;,
+    &quot;poster&quot;: &quot;https://filmschoolrejects.com/wp-content/uploads/2019/03/Game-of-Thrones-Fire-and-Blood.jpg&quot;,
+    &quot;description&quot;: &quot;The book tells the history of House Targaryen, the dynasty that ruled the Seven Kingdoms of Westeros in the backstory of his series A Song of Ice and Fire.&quot;
+},
+{
+    &quot;id&quot;: 3,
+    &quot;name&quot;: &quot;A Knight of the Seven Kingdoms&quot;,
+    &quot;year&quot;: &quot;1998&quot;,
+    &quot;genre&quot;: &quot;horror, thriller, fantasy&quot;,
+    &quot;poster&quot;: &quot;https://filmschoolrejects.com/wp-content/uploads/2019/03/Game-of-Thrones-Lord-Snow.jpg&quot;,
+    &quot;description&quot;: &quot;A Knight of the Seven Kingdoms by George R. R. Martin, published in 2015, collects the first three prequel novellas to the popular A Song of Ice and Fire series.&quot;
+}
+]
+</code></pre>
+                    </div>
+                    <div class="title" id="get1-500">500 Internal Server Error</div>
+                    <div class="description">
+                        Request Body:
+<pre><code>
+This request does not have a body.    
+</code></pre>     
+                    </div>
+                    <div class="description">
+                        Response Body:
+<pre><code>
+{
+    &quot;error&quot;: &quot;Internal Server Error&quot;
+}    
+</code></pre>                        
+                    </div>    
+                </div>
+                <div class="feature article-content">
+                    <div class="row">
+                        <div class="no" id="2">2</div>
+                        <div class="date"><strong><em>ENDPOINT: </em></strong>http://localhost:3000/items/:id</div>
+                    </div>
+                    <span class="date-id"><strong>ID: </strong>3</span>
+                    <div class="title" id="get2-200">200 OK Success</div>
+                    <div class="description">
+                        Request Body:
+<pre><code>
+This request does not have a body.    
+</code></pre>     
+                    </div>
+                    <div class="description">
+                        Response Body:
+<pre><code>
+{
+    &quot;id&quot;: 3,
+    &quot;name&quot;: &quot;A Knight of the Seven Kingdoms&quot;,
+    &quot;year&quot;: &quot;1998&quot;,
+    &quot;genre&quot;: &quot;horror, thriller, fantasy&quot;,
+    &quot;poster&quot;: &quot;https://filmschoolrejects.com/wp-content/uploads/2019/03/Game-of-Thrones-Lord-Snow.jpg&quot;,
+    &quot;description&quot;: &quot;A Knight of the Seven Kingdoms by George R. R. Martin, published in 2015, collects the first three prequel novellas to the popular A Song of Ice and Fire series.&quot;
+}
+</code></pre>
+                    </div>
+                    <span class="date-id"><strong>ID: </strong>4</span>
+                    <div class="title" id="get2-404">404 Not Found Error</div>
+                    <div class="description">
+                        Request Body:
+<pre><code>
+This request does not have a body.    
+</code></pre>     
+                    </div>
+                    <div class="description">
+                        Response Body:
+<pre><code>
+{
+    &quot;error&quot;: &quot;Item not found&quot;
+}    
+</code></pre>                        
+                    </div>
+                    <span class="date-id"><strong>ID: </strong>3</span>
+                    <div class="title" id="get2-500">500 Internal Server Error</div>
+                    <div class="description">
+                        Request Body:
+<pre><code>
+This request does not have a body.    
+</code></pre>     
+                    </div>
+                    <div class="description">
+                        Response Body:
+<pre><code>
+{
+    &quot;error&quot;: &quot;Internal Server Error&quot;
+}    
+</code></pre>                        
+                    </div>    
+                </div>
+                <div class="feature article-content">
+                    <div class="row">
+                        <div class="no" id="3">3</div>
+                        <div class="date"><strong><em>ENDPOINT: </em></strong>http://localhost:3000/items</div>
+                    </div>
+                    <div class="title" id="post-201">201 Created</div>
+                    <div class="description">
+                        Request Body (raw data):
+<pre><code>
+{
+    &quot;name&quot;: &quot;Storm of Swords&quot;,
+    &quot;year&quot;: &quot;2000&quot;,
+    &quot;genre&quot;: &quot;horror, suspense, drama&quot;,
+    &quot;poster&quot;: &quot;https://filmschoolrejects.com/wp-content/uploads/2019/03/Game-of-Thrones-Cripples-Bastards-Broken-Things.jpg&quot;,
+    &quot;description&quot;: &quot;TROLOLO&quot;
+}    
+</code></pre>     
+                    </div>
+                    <div class="description">
+                        Response Body:
+<pre><code>
+{
+    &quot;message&quot;: &quot;Created&quot;,
+    &quot;id&quot;: 4
+}
+</code></pre>
+                    </div>
+                    <div class="title" id="post-500">500 Internal Server Error</div>
+                    <div class="description">
+                        Request Body (raw data):
+<pre><code>
+{
+    &quot;name&quot;: &quot;Storm of Swords&quot;,
+    &quot;year&quot;: &quot;2000&quot;,
+    &quot;genre&quot;: &quot;horror, suspense, drama&quot;,
+    &quot;poster&quot;: &quot;https://filmschoolrejects.com/wp-content/uploads/2019/03/Game-of-Thrones-Cripples-Bastards-Broken-Things.jpg&quot;,
+    &quot;description&quot;: &quot;TROLOLO&quot;
+}    
+</code></pre> 
+                    </div>
+                    <div class="description">
+                        Response Body:
+<pre><code>
+{
+    &quot;error&quot;: &quot;Internal Server Error&quot;
+}    
+</code></pre>                        
+                    </div>    
+                </div>
+                <div class="feature article-content">
+                    <div class="row">
+                        <div class="no" id="4">4</div>
+                        <div class="date"><strong><em>ENDPOINT: </em></strong>http://localhost:3000/items/:id</div>
+                    </div>
+                    <span class="date-id"><strong>ID: </strong>4</span>
+                    <div class="title" id="put-204">204 No Content</div>
+                    <div class="description">
+                        Request Body (raw data):
+<pre><code>
+{
+    &quot;name&quot;: &quot;Storm of Swords&quot;,
+    &quot;year&quot;: &quot;2000&quot;,
+    &quot;genre&quot;: &quot;horror, suspense, drama&quot;,
+    &quot;poster&quot;: &quot;https://filmschoolrejects.com/wp-content/uploads/2019/03/Game-of-Thrones-Cripples-Bastards-Broken-Things.jpg&quot;,
+    &quot;description&quot;: &quot;The novel describes the increasingly vicious War of Five Kings in Westeros, Daenerys's strengthening forces in the East, and the oncoming threat of the Others.&quot;
+}  
+</code></pre>     
+                    </div>
+                    <div class="description">
+                        Response Body:
+<pre><code>
+This response does not have a body.
+</code></pre>
+                    </div>
+                    <span class="date-id"><strong>ID: </strong>5</span>
+                    <div class="title" id="put-404">404 Not Found Error</div>
+                    <div class="description">
+                        Request Body (raw data):
+<pre><code>
+{
+    &quot;name&quot;: &quot;Storm of Swords&quot;,
+    &quot;year&quot;: &quot;2000&quot;,
+    &quot;genre&quot;: &quot;horror, suspense, drama&quot;,
+    &quot;poster&quot;: &quot;https://filmschoolrejects.com/wp-content/uploads/2019/03/Game-of-Thrones-Cripples-Bastards-Broken-Things.jpg&quot;,
+    &quot;description&quot;: &quot;The novel describes the increasingly vicious War of Five Kings in Westeros, Daenerys's strengthening forces in the East, and the oncoming threat of the Others.&quot;
+}    
+</code></pre>     
+                    </div>
+                    <div class="description">
+                        Response Body:
+<pre><code>
+{
+    &quot;error&quot;: &quot;Item not found&quot;
+}    
+</code></pre>                        
+                    </div>
+                    <span class="date-id"><strong>ID: </strong>4</span>
+                    <div class="title" id="put-500">500 Internal Server Error</div>
+                    <div class="description">
+                        Request Body (raw data):
+<pre><code>
+{
+    &quot;name&quot;: &quot;Storm of Swords&quot;,
+    &quot;year&quot;: &quot;2000&quot;,
+    &quot;genre&quot;: &quot;horror, suspense, drama&quot;,
+    &quot;poster&quot;: &quot;https://filmschoolrejects.com/wp-content/uploads/2019/03/Game-of-Thrones-Cripples-Bastards-Broken-Things.jpg&quot;,
+    &quot;description&quot;: &quot;The novel describes the increasingly vicious War of Five Kings in Westeros, Daenerys's strengthening forces in the East, and the oncoming threat of the Others.&quot;
+}   
+</code></pre>     
+                    </div>
+                    <div class="description">
+                        Response Body:
+<pre><code>
+{
+    &quot;error&quot;: &quot;Internal Server Error&quot;
+}    
+</code></pre>                        
+                    </div>    
+                </div>
+                <div class="feature article-content">
+                    <div class="row">
+                        <div class="no" id="5">5</div>
+                        <div class="date"><strong><em>ENDPOINT: </em></strong>http://localhost:3000/items/:id</div>
+                    </div>
+                    <span class="date-id"><strong>ID: </strong>4</span>
+                    <div class="title" id="delete-204">204 No Content</div>
+                    <div class="description">
+                        Request Body:
+<pre><code>
+This request does not have a body.    
+</code></pre>     
+                    </div>
+                    <div class="description">
+                        Response Body:
+<pre><code>
+This response does not have a body.
+</code></pre>
+                    </div>
+                    <span class="date-id"><strong>ID: </strong>5</span>
+                    <div class="title" id="delete-404">404 Not Found Error</div>
+                    <div class="description">
+                        Request Body:
+<pre><code>
+This request does not have a body.    
+</code></pre>     
+                    </div>
+                    <div class="description">
+                        Response Body:
+<pre><code>
+{
+    &quot;error&quot;: &quot;Item not found&quot;
+}    
+</code></pre>                        
+                    </div>
+                    <span class="date-id"><strong>ID: </strong>4</span>
+                    <div class="title" id="delete-500">500 Internal Server Error</div>
+                    <div class="description">
+                        Request Body:
+<pre><code>
+This request does not have a body.    
+</code></pre>     
+                    </div>
+                    <div class="description">
+                        Response Body:
+<pre><code>
+{
+    &quot;error&quot;: &quot;Internal Server Error&quot;
+}    
+</code></pre>                        
+                    </div>    
+                </div>
+                <div class="feature article-content">
+                    <div class="row">
+                        <div class="no" id="6">6</div>
+                        <div class="date"><strong><em>ENDPOINT: </em></strong>http://localhost:3000/reset</div>
+                    </div>
+                    <div class="title" id="get3-201">201 Created Default Items</div>
+                    <div class="description">
+                        Request Body:
+<pre><code>
+This request does not have a body.    
+</code></pre>     
+                    </div>
+                    <div class="description">
+                        Response Body:
+<pre><code>
+{
+    &quot;message&quot;: &quot;Database reset to default state with 2 default items.&quot;
+}
+</code></pre>
+                    </div>
+                    <div class="title" id="get3-500">500 Internal Server Error</div>
+                    <div class="description">
+                        Request Body:
+<pre><code>
+This request does not have a body.    
+</code></pre>     
+                    </div>
+                    <div class="description">
+                        Response Body:
+<pre><code>
+{
+    &quot;error&quot;: &quot;Internal Server Error&quot;
+}    
+</code></pre>                        
+                    </div>    
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.4.0/highlight.min.js"></script>
+    <script>hljs.highlightAll();</script>    
+</body>
+</html>
